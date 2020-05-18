@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faMapMarkedAlt, faBirthdayCake } from '@fortawesome/free-solid-svg-icons'
-import { Row, Col, Card, ListGroup, ListGroupItem, Button } from 'react-bootstrap'
+import { Card, ListGroup, ListGroupItem, Button } from 'react-bootstrap'
 
 const UserCard = ({picture, name, age, description, phone, email, from, birth, sendRequest}) => {
 
@@ -12,9 +12,11 @@ const UserCard = ({picture, name, age, description, phone, email, from, birth, s
         sendRequest(true);
     }
 
-    return ( 
-        <Card style={{ width: '20rem' }}>
-            <Card.Img className="d-block mx-auto w-50 mt-3" variant="top" src={picture} />
+
+
+    return (
+        <Card style={{ width: '100%' }}>
+            <Card.Img className="d-block mx-auto w-50 mt-3" variant="top" src={picture} style={{height: "174px"}}/>
             <Card.Body className="text-center">
             <Card.Title className="font-weight-bold">{name}, {age}</Card.Title>
                 <Card.Text>
